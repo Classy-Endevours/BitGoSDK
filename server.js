@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // setting up the PORT
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8001;
 app.get('/', async (req, res) => {
     try {
         const port = PORT;
@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
         res.status(200).send({
             port,
             hostname,
-            data
+            scope: data.scope
         })
     } catch (error) {
         res.status(500).send({
