@@ -6,3 +6,4 @@
 - run `npm start`
 - go to route `localhost:8001`
 - you will receive port, hostname and data of yours
+- Can add more details on top of this
