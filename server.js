@@ -9,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 // setting up the PORT
-const PORT = process.env.PORT || 8001;
+const HOST = '0.0.0.0';
+const PORT = process.env.PORT || 8080;
 app.get('/', async (req, res) => {
     try {
         const port = PORT;
@@ -26,6 +27,6 @@ app.get('/', async (req, res) => {
         })
     }
 })
-app.listen(PORT, () => {
-    console.log(`server is listening at PORT ${PORT}`)
+app.listen(PORT, HOST, () => {
+    console.log(`Running on http://${HOST}:${PORT}`)
 });
