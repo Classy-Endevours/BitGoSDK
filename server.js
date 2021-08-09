@@ -23,6 +23,7 @@ app.get('/', async (req, res) => {
             token: process.env.ACCESS_TOKEN
         })
     } catch (error) {
+        console.log(error)
         res.status(500).send({
             error: 'Internal server error'
         })
