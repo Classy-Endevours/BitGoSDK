@@ -19,7 +19,8 @@ app.get('/', async (req, res) => {
         res.status(200).send({
             port,
             hostname,
-            scope: data.scope
+            scope: data,
+            token: process.env.ACCESS_TOKEN
         })
     } catch (error) {
         res.status(500).send({
